@@ -1,49 +1,30 @@
-# Getting Started with Create React App
+# [A2305222622] - Frontend Test Submission
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Status
+This submission represents the current state of the project at the end of the time limit. The core UI for the URL Shortener page has been completed with client-side validation. The next steps were planned to implement the core logic for URL shortening, state management, and the statistics page.
 
-## Available Scripts
+## Architecture Design
+The application is a single-page application (SPA) built with React and TypeScript. The architecture is designed for a clean, modular, and maintainable codebase.
 
-In the project directory, you can run:
+### Technology Stack
+* **Framework**: React (or Next.js)
+* **Language**: TypeScript (preferred)
+* **Styling**: Material UI
+* **Routing**: React Router DOM
 
-### `npm start`
+### Data Flow & State Management
+-   The application uses client-side state to manage shortened URLs. The main `App.tsx` component was planned to hold a central state to share data between different pages, such as the `UrlShortenerPage` and the `UrlStatisticsPage`.
+-   This approach was chosen as a robust method for a client-side application, as a backend API was not part of the scope.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Key Features Implemented
+-   A user-friendly navigation bar using Material UI.
+-   Client-side routing to switch between the URL Shortener and URL Statistics pages.
+-   A functional form on the URL Shortener page with inputs for the original URL, validity period, and custom shortcode.
+-   Basic client-side validation for the URL input to ensure a valid format.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-
+### Component Structure
+-   `App.tsx`: The root component that handles application routing and global state management.
+-   `pages/UrlShortenerPage.tsx`: The page component containing the form for shortening URLs.
+-   `pages/UrlStatisticsPage.tsx`: (Planned) The page component to display a list of all shortened URLs in a table format.
+-   `components/Navbar.tsx`: A reusable component for site navigation.
 
